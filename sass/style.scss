@@ -29,6 +29,9 @@
         .navbar-toggler {
             background-color: gray;
         }
+        .navbar-toggler:focus {
+            box-shadow: none!important;
+        }
 
         .navbar-nav {
             margin-left: auto!important;
@@ -190,6 +193,7 @@ p {
     article {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         align-items: center;
         height: 100vh;
         padding: 0rem 4rem;
@@ -273,7 +277,8 @@ p {
         .network {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            text-align: center;
 
             a {
                 font-family: serif;
@@ -359,7 +364,7 @@ p {
     }
 }
 
-@media only screen and (min-width: 150px) and (max-width: 426px) {
+@media only screen and (min-width: 150px) and (max-width: 582px) {
     #carousel {
         background-image: url(../assets/banner2.png);
         height: 100vh;
@@ -372,10 +377,20 @@ p {
     }
 
     #history {
+        padding: 1rem;
+        margin-top: 5rem;
         flex-direction: column;
 
         div {
             width: unset;
+
+            h1 {
+                text-align: center;
+            }
+
+            .storyImg {
+                margin: 0.8rem 0rem;
+            }
         }
     }
 
@@ -390,14 +405,15 @@ p {
     #stellar {
         article {
             flex-direction: column-reverse;
+            padding: 0;
 
             .stellarTitle {
                 margin: 0rem 2rem;
             }
 
             .stellarImg {
-                width: 12rem;
-                height: 11rem;
+                width: 14rem;
+                height: 13rem;
                 margin: 1.5rem;
             }
         }
@@ -405,12 +421,13 @@ p {
 
     #menues {
         flex-direction: unset;
+        background-attachment: unset;
 
         .menuOptions {
             flex-direction: column;
 
             div {
-                margin: 1rem 3rem;
+                margin: 0.5rem 1rem;
             }
         }
     }
@@ -429,16 +446,20 @@ p {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    margin: 0.5rem 1rem;
+                    margin: 0.5rem 1.5rem;
 
                     .socialImg {
-                        width: 2rem;
+                        width: 3rem;
+                    }
+
+                    p {
+                        display: none;
                     }
                 }
             }
 
             iframe {
-                width: 100vw;
+                width: 100%;
             }
         }
     }
@@ -459,12 +480,19 @@ p {
 
 }
 
-@media only screen and (min-width: 427px) and (max-width: 769px) {
+@media only screen and (min-width: 583px) and (max-width: 769px) {
     #history {
-        height: 65vh;
+        flex-direction: column;
+        margin: 5rem 0rem;
+
+        div {
+            width: unset;
+            margin: 1rem 0rem;
+        }
     }
 
     #options {
+        grid-template-columns: repeat(2, 1fr);
         align-items: unset;
 
         article {
@@ -481,6 +509,14 @@ p {
         }
     }
 
+    #menues {
+        .menuOptions {
+            div {
+                margin: 0rem 0.8rem;
+            }
+        }
+    }
+
     #contact {
         h1 {
             margin-bottom: 1rem;
@@ -490,7 +526,7 @@ p {
 
         article {
             iframe {
-                width: 450px;
+                width: 410px;
             }
         }
     }

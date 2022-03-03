@@ -73,6 +73,11 @@
   background-color: gray;
 }
 
+#encabezado .navbar .navbar-toggler:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 #encabezado .navbar .navbar-nav {
   margin-left: auto !important;
   margin-right: unset !important;
@@ -224,6 +229,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -349,9 +357,10 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 #contact article .network a {
@@ -443,7 +452,7 @@ p {
   color: white;
 }
 
-@media only screen and (min-width: 150px) and (max-width: 426px) {
+@media only screen and (min-width: 150px) and (max-width: 582px) {
   #carousel {
     background-image: url(../assets/banner2.png);
     height: 100vh;
@@ -454,6 +463,8 @@ p {
     display: none;
   }
   #history {
+    padding: 1rem;
+    margin-top: 5rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -461,6 +472,12 @@ p {
   }
   #history div {
     width: unset;
+  }
+  #history div h1 {
+    text-align: center;
+  }
+  #history div .storyImg {
+    margin: 0.8rem 0rem;
   }
   #options {
     -ms-grid-columns: (1fr)[1];
@@ -474,13 +491,14 @@ p {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    padding: 0;
   }
   #stellar article .stellarTitle {
     margin: 0rem 2rem;
   }
   #stellar article .stellarImg {
-    width: 12rem;
-    height: 11rem;
+    width: 14rem;
+    height: 13rem;
     margin: 1.5rem;
   }
   #menues {
@@ -488,6 +506,7 @@ p {
     -webkit-box-direction: unset;
         -ms-flex-direction: unset;
             flex-direction: unset;
+    background-attachment: unset;
   }
   #menues .menuOptions {
     -webkit-box-orient: vertical;
@@ -496,7 +515,7 @@ p {
             flex-direction: column;
   }
   #menues .menuOptions div {
-    margin: 1rem 3rem;
+    margin: 0.5rem 1rem;
   }
   #contact {
     -webkit-box-align: center;
@@ -527,13 +546,16 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0.5rem 1rem;
+    margin: 0.5rem 1.5rem;
   }
   #contact article .network a .socialImg {
-    width: 2rem;
+    width: 3rem;
+  }
+  #contact article .network a p {
+    display: none;
   }
   #contact article iframe {
-    width: 100vw;
+    width: 100%;
   }
   #footer article {
     -webkit-box-orient: vertical;
@@ -549,11 +571,21 @@ p {
   }
 }
 
-@media only screen and (min-width: 427px) and (max-width: 769px) {
+@media only screen and (min-width: 583px) and (max-width: 769px) {
   #history {
-    height: 65vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 5rem 0rem;
+  }
+  #history div {
+    width: unset;
+    margin: 1rem 0rem;
   }
   #options {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     -webkit-box-align: unset;
         -ms-flex-align: unset;
             align-items: unset;
@@ -565,13 +597,16 @@ p {
     width: 18rem;
     height: 18rem;
   }
+  #menues .menuOptions div {
+    margin: 0rem 0.8rem;
+  }
   #contact h1 {
     margin-bottom: 1rem;
     padding-left: 1rem;
     text-align: left;
   }
   #contact article iframe {
-    width: 450px;
+    width: 410px;
   }
   #footer article div img {
     width: 18rem;
