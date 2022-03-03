@@ -378,7 +378,7 @@ p {
 
     #history {
         padding: 1rem;
-        margin-top: 5rem;
+        margin-top: 2rem;
         flex-direction: column;
 
         div {
@@ -386,10 +386,6 @@ p {
 
             h1 {
                 text-align: center;
-            }
-
-            .storyImg {
-                margin: 0.8rem 0rem;
             }
         }
     }
@@ -403,6 +399,8 @@ p {
     }
     
     #stellar {
+        margin-bottom: 2rem;
+
         article {
             flex-direction: column-reverse;
             padding: 0;
@@ -434,6 +432,10 @@ p {
 
     #contact {
         align-items: center;
+
+        h1 {
+            width: unset;
+        }
 
         article {
             flex-direction: column;
